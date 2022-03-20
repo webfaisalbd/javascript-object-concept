@@ -8,9 +8,11 @@ const student = {
         major:'software'
     },
     balance: 40000,
+    // method
     takeExam: function(){
         console.log(this.bestFriend.name+" is  "+'taking exam');
     },
+    // method
     treatDey: function(cost,tips){
         this.balance=this.balance-cost-tips;
         return this.balance;
