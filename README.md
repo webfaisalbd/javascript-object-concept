@@ -246,3 +246,53 @@ console.log(compareObject(human1,human2));
 ---
 
 
+
+
+
+### `this keyword`
+
+> firstSkill normal function er jonno, this output ta, student er all property gula pay 
+
+> secondSkill arrow function er jonno, this output ta, tar immediate level student er all property pay na. tar uporer level pay. eikhane tar uporer level hosse, window. 
+
+> thirdSkill normal function er vitore myArrow namer ekta arrow function ase, arrow function er khetre same rules, this output ta, tar immediate level thirdSkill er  property pay na. tar uporer level  er all property pay. eikhane tar uporer level hosse, student. 
+
+> add() function jodi index.html er kono event er moddhe thake call kora hoy, jmn---> <input type="text" onkeydown="add()"> ; tahole add normal niyome hobe. Jemon-> add() function  window te ase, tai this er output hobe, window.
+
+> add() function jodi index.html er kono event er moddhe thake call kora na hoy, jmn---> <button onclick="console.log(this)">Click Me</button> ; tahole add normal niyome hobe na. eitar output hobe, oi element ta. jemon eikhetre <button onclick="console.log(this)">Click Me</button> hobe output 
+
+
+```javascript
+
+const student = {
+    id: 101,
+    name: "faisal",
+    firstSkill: function(id,name){
+        console.log("My name is "+this.name);
+        console.log(this);
+    },
+    secondSkill: () => {
+        console.log(this);
+    },
+    thirdSkill: function(){
+        const myArrow= () => 
+            console.log(this);
+            myArrow();
+        
+    }
+     
+}
+
+function add(){
+    console.log(this);
+}
+
+
+
+```
+
+
+
+---
+
+
